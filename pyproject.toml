@@ -1,0 +1,20 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ice-language"
+version = "0.1.0"
+description = "ICE: Bahasa pemrograman berbahasa Indonesia (lexer, parser, interpreter)"
+readme = "ice_lang/README.md"
+requires-python = ">=3.10"
+authors = [{name = "ICE Dev"}]
+license = {text = "MIT"}
+
+[project.scripts]
+ice = "ice_lang.cli:main"
+icec = "ice_lang.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ice_lang"]
